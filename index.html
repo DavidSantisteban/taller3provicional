@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar/Modificar Tareas</title>
     <script src="agregarTareas.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Agregar una nueva tarea</h1>
     <input type="text" id="tarea" placeholder="Escribe una tarea">
-    <button onclick="agregar()">Agregar Tarea</button>
-
-    
+    <button id ="agregar" onclick="agregar()">Agregar Tarea</button>
     <ul id="lista"></ul>
 
     <br>
-    <button onclick="window.location.href='mostrarTareas.html'">Ver Tareas</button>
+    <button id = "verTareas"onclick="window.location.href='mostrarTareas.html'">Ver Tareas</button>
 </body>
 </html>
