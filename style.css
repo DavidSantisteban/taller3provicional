@@ -1,6 +1,18 @@
+* {
+    font-family: monospace;
+}
+
+body {
+    background-color: rgb(245, 245, 220);
+}
+
+button {
+    cursor: grab;
+    background-color: rgb(255, 255, 172);
+}
 #lista li {
     display: flex;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(255, 255, 172);;
     border-radius: 10px;
     width: 50%;
     height: 100%;
@@ -8,13 +20,29 @@
     word-wrap: break-word;
     list-style: none;
     margin-top: 10px;
+    font-size: 22px;
 }
 
 #lista li button{
+    background: none;
     margin-left: auto;
     width: auto;
     height: auto;
-    padding: 5px 5px;
-    font-size: 15px;
+    font-size: 22px;
     border: none;
+}
+
+button:focus, input:focus, a:focus {
+    outline: 3px solid #ff6600;
+    outline-offset: 3px;
+    box-shadow: 0 0 10px rgba(255,102, 0, 0.7);
+    border-radius: 5px;
+}
+
+#agregar {
+    margin-top: 20px;
+}
+
+#agregar, #tarea, #verTareas, #inicio {
+    font-size: 20px;
 }
