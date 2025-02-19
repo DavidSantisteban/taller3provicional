@@ -2,7 +2,7 @@ let contador = 1;
 
 //Se mantiene la funcionalidad del prototipo del Taller 2, pero se agregan las funciones de agregar y eliminar en localStorage para mantener la informacion entre las paginas
 function agregar() {
-    let input = document.getElementById("tarea").value;
+    let input = document.getElementById("tarea").value.trim();
     const lista = document.getElementById("lista");
 
     if (input.trim() !== "") {
@@ -41,3 +41,11 @@ function eliminarTareaEnLocalStorage(tarea) {
         //Se guarda nuevamente el array actualizado
     }
 }
+
+//Para la accesibilidad si el usuario ingresa enter en el input, se agregara la Tarea sin necesidad de moverse usar el boton.
+
+document.getElementById("tarea").addEventListener("keydown", function(event) {
+    if (event.key === "Enter"){
+        agregar();
+    }
+})
